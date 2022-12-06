@@ -18,3 +18,11 @@ h2 {
 h1 span, h2 strong {
   color: blue;
 }
+p {
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+  background-color: blue;
+  width: max-content;
+  margin: 2% auto 0;
+}
