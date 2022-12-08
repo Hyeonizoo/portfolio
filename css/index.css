@@ -1,0 +1,250 @@
+@import url("./common.css");
+/* ------------------------------------------------------ home */
+#home {
+  overflow: hidden;
+}
+/* ------------------------------------ home - slogan ------------------ */
+#home #slogan {
+  height: calc(100vh - 90px * 2);
+  overflow: hidden;
+}
+#home #slogan .sloganText {
+  position: relative;
+  margin: 0 auto;
+  width: max-content;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  font-weight: 900;
+  line-height: 150px;
+  color: #000;
+  text-align: center;
+  text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+}
+#home #slogan .sloganText .active {
+  color: #fff;
+  text-shadow: none;
+}
+#home #slogan .sloganText div:nth-child(2) {
+  position: relative;
+  left: calc(100vw * -300 / 1920);
+}
+#home #slogan .sloganText div:nth-child(3) {
+  position: relative;
+  left: calc(100vw * 190 / 1920);
+}
+/* ------------------------------------ home - arrowBox ------------------ */
+#home #arrowBox {
+  position: relative;
+  height: 90px;
+  border-top: 1px solid var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+#home #arrowBox .arrowDown {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  margin-top: 15px;
+  left: 50%;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+  transform: translateX(-50%) rotate(45deg);
+  animation: arrow 2s infinite;
+	-webkit-animation: arrow 2s infinite; 
+}
+#home #arrowBox .arrowDown:nth-child(1) {
+  border-right-color: var(--yellow);
+  border-bottom-color: var(--yellow);
+  animation-delay:-1s;
+	-webkit-animation-delay:-1s;
+}
+#home #arrowBox .arrowDown:nth-child(2) {
+  top: 10px;
+  border-right-color: var(--pink);
+  border-bottom-color: var(--pink);
+  animation-delay:-0.7s;
+	-webkit-animation-delay:-0.7s;
+}
+#home #arrowBox .arrowDown:nth-child(3) {
+  top: 20px;
+  border-right-color: var(--pink);
+  border-bottom-color: var(--pink);
+  animation-delay:-0.4s;
+	-webkit-animation-delay:-0.4s;
+}
+#home #arrowBox .arrowDown:nth-child(4) {
+  top: 30px;
+  border-right-color: var(--purple);
+  border-bottom-color: var(--purple);
+  animation-delay:0s;
+	-webkit-animation-delay:0s;
+}
+@keyframes arrow {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+@-webkit-keyframes arrow {
+  0% {opacity:0}
+  40% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+/* ------------------------------------ home - introduce ------------------ */
+#home #introduce {
+  margin-top: 350px;
+}
+#home #introduce .title {
+  min-width: max-content;
+  font-size: 64px;
+  font-weight: 100;
+}
+#home #introduce .title .shortLine {
+  display: inline-block;
+  width: 223px;
+  height: 20px;
+  border-top: 2px solid var(--purple);
+}
+#home #introduce .title p:nth-child(2) span {
+  font-weight: 500;
+  color: var(--purple);
+  background-color: #fff;
+  background: linear-gradient(transparent 10%, var(--ivory) 10% 90%, transparent 90%);
+}
+#home #introduce .profile {
+  display: flex;
+  margin-top: 100px;
+}
+#home #introduce .profile .introL {
+  position: relative;
+  margin-left: calc(100vw * 130 / 1920);
+  width: calc(100vw * 840 / 1920);
+  min-width: 550px;
+  height: 1000px;
+}
+#home #introduce .profile .introL .frame {
+  position: absolute;
+  width: 455px;
+  height: 455px;
+  top: 70px;
+  left: calc(100vw * 85 / 1920);
+  background-image: url("../img/profile.png");
+}
+#home #introduce .profile .introR .textContainer {
+  position: relative;
+}
+#home #introduce h4 {
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--purple);
+}
+#home #introduce .profile .introR .textContainer h4 {
+  margin-bottom: 15px;
+}
+#home #introduce .profile .introR .textContainer:nth-child(2) h4 {
+  color: var(--pink);
+}
+#home #introduce .profile .introR .textContainer:nth-child(3) h4 {
+  color: var(--yellow);
+}
+#home #introduce .profile .introR .textContainer .line {
+  position: absolute;
+  width: 100vw;
+  top: 15px;
+  left: 120px;
+  border-top: 1px solid var(--gray);
+}
+#home #introduce .line::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  top: -5px;
+  left: -9px;
+  border: 1px solid var(--gray);
+  border-radius: 50%;
+}
+#home #introduce .profile .introR .textContainer .textBox {
+  display: flex;
+  margin-bottom: 110px;
+  font-size: 20px;
+}
+#home #introduce .profile .introR .textContainer .textBox li {
+  margin-top: 15px;
+}
+#home #introduce .profile .introR .textContainer .textBox .textL {
+  /* background-color: magenta; */
+  min-width: max-content;
+  margin-right: calc(100vw * 10 / 1920);
+  font-weight: 400;
+}
+#home #introduce .profile .introR .textContainer .textBox .textR {
+  font-weight: 200;
+  color: #ccc;
+  min-width: 330px;
+}
+#home #introduce .skills {
+  position: relative;
+  padding-left: calc(100vw * 130 / 1920);
+}
+#home #introduce .skills select {
+  padding: 5px 40px;
+  font-size: 28px;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  appearance: none;
+  background: url("../img/rounded-down.svg") no-repeat 95% 50%;
+}
+#home #introduce .skills select option {
+  font-size: 24px;
+  color: #000;
+}
+#home #introduce .skills h4 {
+  display: inline-block;
+  margin-left: 10px;
+}
+#home #introduce .skills .line {
+  position: absolute;
+  width: 100%;
+  top: 22px;
+  left: 450px;
+  border-top: 1px solid var(--gray);
+}
+#home #introduce .skills ul {
+  margin-left: 400px;
+  padding-bottom: 100px;
+}
+#home #introduce .skills .graph {
+  display: inline-block;
+  position: relative;
+  margin-top: 40px;
+  margin-right: calc(100vw * 100 / 1920);
+  width: 95px;
+  min-width: 95px;
+  height: 95px;
+  background: conic-gradient(from 90deg at 50% 50%, #A22EE2 0deg, #FFE396 112.5deg, #CD69D1 232.5deg, #A22EE2 360deg);
+  border: 1px solid #000000;
+  border-radius: 50%;
+}
+#home #introduce .skills .graph::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 22px;
+  left: 22px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+}
+#home #introduce .skills .graph span {
+  position: absolute;
+  min-width: max-content;
+  top: 105px;
+  left: 50%;
+  font-weight: 200;
+  letter-spacing: 0.01em;
+  transform: translateX(-50%);
+}
