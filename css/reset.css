@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,
+input,legend,li,ol,p,select,table,td,textarea,th,ul, header, nav, section
+{ margin:0; padding:0; font-family: 'Pretendard', sans-serif; box-sizing: border-box; }
+body,button,input,select,table,textarea { font-family: 'Pretendard', sans-serif; font-weight: 500; }
+
+body, p{font-family: 'Pretendard';}
+header li{font-family: 'Inter';}
+button,input { border-radius:0; border: none; background-color: transparent; cursor: pointer;}
+fieldset,img { border:0 }
+ol,ul { list-style:none }
+address,em { font-style:normal }
+a { text-decoration:none }
+iframe { overflow:hidden; margin:0; padding:0; border:0 }
