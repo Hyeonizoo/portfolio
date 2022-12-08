@@ -6,7 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="12월 16일 오픈 예정!">
   <!-- CSS -->
-  <link rel="stylesheet" type="text/css" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/0f26513d28.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="./css/index.css">
   <!-- javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
@@ -15,9 +16,9 @@
 <body>
   <header class="inner">
     <nav>
-      <a href=""><h1><img src="./img/logo.svg"></h1></a>
+      <a href="./index.html"><h1><img src="./img/logo.svg"></h1></a>
       <ul id="gnb">
-        <a href="#"><li>ABOUT</li></a>
+        <a href="./about.html"><li>ABOUT</li></a>
         <a href="#"><li>WORKS</li></a>
         <a href="#"><li>CONTACT</li></a>
       </ul>
@@ -25,12 +26,129 @@
   </header>
   <main>
     <div id="wrap">
-      <section class="main">
-        <div class="mainText">
-          <div><span class="mainKw">반드시,</span> <span class="mainkw">반듯하게</span></div>
-          <div><span>앞을 향해</span> <span class="active">나아가는</span></div>
-          <div><span class="active">웹퍼블리셔</span><span>입니다</span></div>
+      <section id="home">
+        <h2 class="hidden">메인화면</h2>
+        <section id="slogan" class="inner">
+          <h3 class="hidden">슬로건</h3>
+          <div class="sloganText">
+            <div><span class="mainKw1 active">반드시</span>, <span class="mainkw2">반듯하게</span></div>
+            <div><span>앞을 향해</span> <span class="active">나아가는</span></div>
+            <div><span class="active">웹퍼블리셔</span><span>입니다</span></div>
+          </div>
+        </section>
+        <div id="arrowBox">
+          <ul>
+            <li class="arrowDown"></li>
+            <li class="arrowDown"></li>
+            <li class="arrowDown"></li>
+            <li class="arrowDown"></li>
+          </ul>
         </div>
+        <section id="introduce">
+          <h3 class="hidden">프로필</h3>
+          <div class="title inner">
+            <p>만나서 <span class="shortLine"></span> 반가워요!</p>
+            <p>저를 간단하게 <span>소개</span>하자면,</p>
+          </div>
+          <div class="profile">
+            <section class="introL">
+              <div class="frame"></div>
+            </section>
+            <section class="introR">
+              <div class="textContainer">
+                <h4>프로필은</h4>
+                <div class="line"></div>
+                <div class="textBox">
+                  <ul class="textL">
+                    <li>이름</li>
+                    <li>생일</li>
+                    <li>연락처</li>
+                    <li>주소</li>
+                  </ul>
+                  <ul class="textR">
+                    <li>반현지</li>
+                    <li>2001.04.28</li>
+                    <li>010-7763-5412</li>
+                    <li>인천광역시 계양구</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="textContainer">
+                <h4>학력은</h4>
+                <div class="line"></div>
+                <div class="textBox">
+                  <ul class="textL">
+                    <li>2023.02</li>
+                    <li>2022.03</li>
+                    <li>2021.03</li>
+                    <li>2021.02</li>
+                  </ul>
+                  <ul class="textR">
+                    <li>계원예술대학교 디지털미디어디자인과 졸업 (예정)</li>
+                    <li>계원예술대학교 디지털미디어디자인과 세부전공 '프로그래밍' 선택</li>
+                    <li>계원예술대학교 디지털미디어디자인과 입학</li>
+                    <li>작전여자고등학교 졸업</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="textContainer">
+                <h4>활동은</h4>
+                <div class="line"></div>
+                <div class="textBox">
+                  <ul class="textL">
+                    <li>2022.09 ~ 2022.11</li>
+                    <li>2022.07 ~ 2022.11</li>
+                    <li>2022.09</li>
+                    <li>2022.07 ~ 2022.08</li>
+                    <li>2022.03 ~ 2022.06</li>
+                    <li>2021.09 ~ 2021.11</li>
+                    <li>2021.04 ~ 2023.02</li>                    
+                  </ul>
+                  <ul class="textR">
+                    <li>2022 졸업전시 준비위원회 영상팀 팀장</li>
+                    <li>2022 메타버스 솔루션 챌린지 결선 진출</li>
+                    <li>제28회 커뮤니케이션디자인 국제 공모전 디지털미디어디자인 부문 '특별상'</li>
+                    <li>전주대학교 실감미디어 혁신공유대학 로컬콘텐츠PBL '혁신상'</li>
+                    <li>2학년 1학기 성적 우수 장학생</li>
+                    <li>2021 졸업전시 준비위원회 영상팀</li>
+                    <li>학과 영상동아리 DIMO</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="skills">
+            <select name="skill" id="skillBox">
+              <option value="skill0"><span>< /></span> 언어</option>
+              <option value="skill1"><span>🎨</span> 어도비</option>
+              <option value="skill2"><span>📄</span> 문서</option>
+            </select>
+            <h4>능력은</h4>
+            <div class="line"></div>
+            <ul class="skill_0">
+              <li class="graph"><span>HTML5</span></li>
+              <li class="graph"><span>CSS3</span></li>
+              <li class="graph"><span>JavaScript</span></li>
+              <li class="graph"><span>jQuery</span></li>
+              <li class="graph"><span>React</span></li>
+              <li class="graph"><span>C#</span></li>
+            </ul>
+            <ul class="skill_1">
+              <li class="graph"><span>Photoshop</span></li>
+              <li class="graph"><span>Illustrator</span></li>
+              <li class="graph"><span>Premire Pro</span></li>
+              <li class="graph"><span>After Effect</span></li>
+              <li class="graph"><span>Figma</span></li>
+              <li class="graph"><span>XD</span></li>
+            </ul>
+            <ul class="skill_2">
+              <li class="graph"><span>Power Point</span></li>
+              <li class="graph"><span>Word</span></li>
+              <li class="graph"><span>Excel</span></li>
+              <li class="graph"><span>Notion</span></li>
+            </ul>
+          </div>
+        </section>
       </section>
     </div>
   </main>
