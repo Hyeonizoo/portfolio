@@ -1,24 +1,36 @@
 $(document).ready(function() {
 
-  $(function(){
-    var idx = 0;
-    var mainKw = $('.mainKw');
-    setInterval(myKeyword, 1500);
-    function myKeyword(){
-      mainKw.removeClass('active');
-      // mainKw.eq(idx).addClass('active');
-      // active가 바뀔 때마다 랜덤값을 다시 주기 위해
-      // $('.peopleNum').text(Math.floor(Math.random() * 1000));
-      console.log(idx);
-      idx++;
-      if(idx >= mainKw.length) idx= 0;
-      for(i=0; i<3; i++);
-    };
+  // header scroll
+  var lastScrollTop = 0, delta = 15;
+  $(window).on("scroll", function(event) {
+    var st = $(this).scrollTop();
+    if (Math.abs(lastScrollTop - st) <= delta) return;
+    if ((st > lastScrollTop) && (lastScrollTop > 0)) {
+      $("header").css("top", "-90px");
+    } else {
+      $("header").css("top", "0px");
+    }
+    lastScrollTop = st;
   });
 
+  // slogan
+  setInterval(myKeyword, 1500);
+    function myKeyword(){
+      $('.mainKw1').toggleClass('active');
+      $('.mainkw2').toggleClass('active');
+    };
 
+  // select box
+  $('.skill_1').hide();
+  $('.skill_2').hide();
+  $('#skillBox').click(function(){
+    var selectNum = $("#skillBox option").index($("#skillBox option:selected"));
+    console.log(selectNum);
+    if($('#skillBox>option:selected').val() == 'skill' + selectNum) {
+      console.log(selectNum + '번 선택');
+      $('.skill_' + selectNum).show();
+      $('.skills ul').not($('.skill_' + selectNum)).hide();
+    }
+  });
 
-
-
-
-})
+});
