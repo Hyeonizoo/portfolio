@@ -1,0 +1,15 @@
+@import url("./common.css");
+
+header nav h1 img {
+  filter: brightness(100);
+}
+header nav h1:hover img {
+  filter: none;
+}
+header nav #gnb {
+  right: calc(100vw * 147 / 1920);
+}
+
+#horizontal {
+  height: calc(100vh - 90px);
+}

@@ -1,0 +1,68 @@
+@import url("./reset.css");
+
+.inner {
+  padding: 0 calc(100vw * 130 / 1920);
+}
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  overflow: hidden;
+  height: 0;
+  line-height: 0;
+  width: 0;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --purple: #A22EE2;
+  --pink: #CD69D1;
+  --yellow: #FFE396;
+  --gray: #999;
+  --ivory: rgb(255, 255, 230);
+}
+header {
+  position: fixed;
+  width: 100%;
+  min-width: 400px;
+  height: 90px;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  border-bottom: 1px solid var(--gray);
+  transition: top 1s;
+  z-index: 9;
+}
+header nav {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 90px;
+}
+header nav h1 {
+  display: inline-block;
+  position: absolute;
+}
+header nav h1 img {
+  position: relative;
+  top: 15px;
+}
+header nav #gnb {
+  display: flex;
+  position: absolute;
+  right: calc(100vw * 130 / 1920);
+  font-family: 'Inter', sans-serif;
+}
+header nav #gnb li {
+  color: #fff;
+  margin-left: calc(100vw * 100 / 1920);
+}
+header nav #gnb li:hover {
+  color: var(--purple);
+}
+header nav #gnb li.active {
+  color: var(--purple);
+}
+#wrap {
+  padding-top: 90px;
+  color: #fff;
+  background-color: #000;
+}
