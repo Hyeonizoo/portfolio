@@ -8,9 +8,11 @@
     <!-- CSS -->
     <script src="https://kit.fontawesome.com/0f26513d28.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="./css/about.css">
+    <link rel="stylesheet" type="text/css" href="./css/locomotive-scroll.css"/>
     <!-- javaScript -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
+    <script type="text/javascript" src="js/about.js"></script> -->
     <title>Hyeonji Portfolio</title>
   </head>
 <body>
@@ -18,16 +20,133 @@
     <nav>
       <a href="./index.html"><h1><img src="./img/logo.svg"></h1></a>
       <ul id="gnb">
-        <a href="./about.html"><li class="active">ABOUT</li></a>
-        <a href="#"><li>WORKS</li></a>
-        <a href="#"><li>CONTACT</li></a>
+        <a href="" onclick="history.go()"><li class="gnbAbout active">ABOUT</li></a>
+        <a href="./index.html#works"><li class="gnbWorks">WORKS</li></a>
+        <a href="./index.html#contact"><li class="gnbContact">CONTACT</li></a>
       </ul>
     </nav>
   </header>
   <main>
     <div id="wrap">
-      <div id="horizontal"></div>
+      <div class='scroll-animations-example' data-scroll-container>
+        <div class='scrollsection' data-scroll-section>
+          <section class="textContainer">
+            <div class="mainKw01">
+              <h2><span class="textLine">반드시.</span>반드시.</h2>
+              <p>[반드시] 틀림없이 꼭.</p>
+            </div>
+            <div class="subKw01">
+              <h3>너는 정말 지겹지도 않아?</h3>
+              <p>원하는 결과를 얻기 위해, 계속 다시 시도하는 저를 보며 친구들이 한 말입니다. 
+                저의 타고난 개발 능력은 그리 높지 않을지도 모릅니다. 그러나 대신 이를 커버할 수 있는 
+                <span class="highlight_purple">끈기와 집요함</span>을 가졌고, 이것이 바로 저만의 재능입니다. 
+                <span class="highlight_purple">반드시 해내겠다는 의지.</span> 저의 쉽게 포기하지 않는 성격은 앞을 향해
+                나아가게 하는 원동력입니다.</p>
+            </div>
+            <div class="subKw02">
+              <h3>편안함에 안주하지 않고, 두려움을 향해 도전합니다.</h3>
+              <p>모르는 것이 많다는 것. 그것은 앞으로 <span class="highlight_purple">더 많은 것을 경험하고 알아갈 수 있다</span>는 
+              것이기도 합니다. 저는 불확실함을 두려워하면서도, 그러한 <span class="highlight_purple">두려움을 향해 끊임없이 
+              도전합니다.</span> 그리고 그렇게 한 발자국 나아갔을 때, 성장해 있을 나를 기대합니다.</p>
+            </div>
+            <div class="mainKw02">
+              <h2>반드시-<div class="textLine">반듯이-</div></h2>
+              <p>[반드시] 작은 물체, 또는 생각이나 행동 따위가 비뚤어지거나 기울거나 굽지 않고 바르게</p>
+            </div>
+            <div class="subKw03">
+              <h3>언제, 어디에서 누가 사용해도 불편하지 않게.</h3>
+              <p>표준은 사회적 합의를 통해 이루어진 중요한 요소입니다. 모든 사용자들이 상황에 
+                구애받지 않고 동일한 웹사이트에 접근할 수 있도록, <span class="highlight_pink">웹표준을 지켜 
+                탄탄하게 시멘틱 마크업을 합니다.</span> 이렇게 웹표준, 웹호환성, 웹접근성의 
+                균형을 맞추며 의미있는 코드를 작성합니다.</p>
+            </div>
+            <div class="subKw04">
+              <h3>소통하는, 그리고 조율하는.</h3>
+              <p>기획자, 디자이너, 그리고 개발자가 함께 일하는 과정에서 <span class="highlight_pink">원활한 협업</span>을 
+              위해 노력합니다. 커뮤니케이션을 통해 서로의 <span class="highlight_pink">의도를 이해하고 존중</span>하며 
+              다같이 좋은 결과물을 만들어갑니다.</p>
+            </div>
+            <div class="mainKw03">
+              <h2>그러나<span>,</span></h2>
+            </div>
+            <div class="subKw05">
+              <h3>그러나 가끔은.</h3>
+              <p>개발자라고 딱딱하란 법 있나요? 직선이 모이면 곡선이 되듯이, 상황에 따라 
+                <span class="highlight_yellow">유연하게 코드를 작성합니다.</span> 사용자 입장에서 생각하며 <span class="highlight_yellow">편하고 즐거운 
+                사용자 경험</span>을 만들기 위해 노력합니다.</p>
+            </div>
+            <div class="subKw06">
+              <h3>무한한.</h3>
+              <p>나의 선들은 어디까지 뻗어나갈까요? 또 무수한 선들이 모여 무엇을 만들어낼까요.
+                저는, <span class="highlight_yellow">다음이 궁금한 개발자</span>입니다.</p>
+            </div>
+          </section>
+          <div class='item -normal' data-scroll data-scroll-speed="2">
+            <img class='image' src='./img/about1.jpg'>
+          </div>
+          <div class='item -big' data-scroll data-scroll-speed="1">
+            <img class='image' src='./img/about2.png'>
+          </div>
+          <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+            <img class='image' src='./img/about3.png'>
+          </div>
+          <div class='item -normal' data-scroll data-scroll-speed="3">
+            <img class='image' src='./img/about4.png'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+            <img class='image' src='./img/about5.png'>
+          </div>
+          <div class='item -big -horizontal' data-scroll data-scroll-speed="4">
+            <img class='image' src='./img/about6.png'>
+          </div>
+          <div class='item -small' data-scroll data-scroll-speed="2">
+            <img class='image' src='./img/about7.png'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+            <img class='image' src='./img/about8.png'>
+          </div>
+          <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+            <img class='image' src='./img/about9.png'>
+          </div>
+          <div class='item -big' data-scroll data-scroll-speed="1">
+            <img class='image' src='./img/about10.png'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+            <img class='image' src='./img/about11.png'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+            <img class='image' src='./img/about12.png'>
+          </div>
+          <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+            <img class='image' src='./img/about13.png'>
+          </div>
+          <div class='item -big' data-scroll data-scroll-speed="3">
+            <img class='image' src='./img/about14.png'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="2">
+            <img class='image' src='./img/about15.png'>
+          </div>
+          <div class='item -small -horizontal' data-scroll data-scroll-speed="4">
+              <img class='image' src='https://picsum.photos/id/129/400/300'>
+          </div>
+          <div class='item -big' data-scroll data-scroll-speed="2">
+              <img class='image' src='https://picsum.photos/id/137/600/800'>
+          </div>
+          <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+              <img class='image' src='https://picsum.photos/id/141/300/400'>
+          </div>
+          <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+              <img class='image' src='https://picsum.photos/id/145/400/300'>
+          </div>
+          <div class='item -normal' data-scroll data-scroll-speed="1">
+              <img class='image' src='https://picsum.photos/id/147/300/400'>
+          </div>
+        </div>
+      </div>
     </div>
   </main>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
+<script type="text/javascript" src="js/about.js"></script>
 </body>
 </html>
