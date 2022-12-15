@@ -1,0 +1,409 @@
+@import url("./common.css");
+
+header nav h1 img {
+  filter: brightness(100);
+}
+header nav h1:hover img {
+  filter: none;
+}
+header nav #gnb {
+  right: calc(100vw * 135 / 1920);
+}
+#wrap {
+  /* overflow: hidden; */
+  width: 100vw;
+  height: calc(100vh - 90px);
+}
+
+/* ------------------------------------------------------ */
+
+aside {
+  position: absolute;
+  border-right: 1px solid var(--gray);
+  width: calc(100vw * 130 / 1920);
+  height: calc(100vh - 90px);
+}
+aside .asideBox {
+  position: relative;
+  /* height: 100%; */
+  height: 500px;
+  /* border: 1px solid green; */
+  /* padding: 25px; */
+  margin: 25px 15px;
+  /* text-align: right; */
+}
+aside .asideBox .back {
+  position: absolute;
+  padding: 8px;
+  width: max-content;
+  /* left: 45px; */
+  right: 0;
+  font-family: 'arial', 'san-serif';
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+  border-radius: 50%;
+  cursor: pointer;
+}
+aside .asideBox .back:hover {
+  color: var(--purple);
+  border: 1px solid var(--purple);
+}
+aside .asideBox ul {
+  position: absolute;
+  top: 160px;
+  right: 0;
+  /* border: 1px solid blue; */
+}
+aside .asideBox ul li {
+  /* border: 1px solid red; */
+  margin: 50px 0;
+  width: 80px;
+  height: 60px;
+  background-color: #999;
+  background-size: cover;
+  cursor: pointer;
+}
+aside .asideBox ul li:hover {
+  transform: scale(1.05);
+}
+aside .asideBox ul li:hover::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 65px;
+  border-bottom: 1px solid var(--yellow);
+}
+
+aside .asideBox ul li:nth-child(1) {
+  background-image: url("../img/works_thumb01.png");
+}
+aside .asideBox ul li:nth-child(2) {
+  background-image: url("../img/works_thumb02.png");
+}
+aside .asideBox ul li:nth-child(3) {
+  background-image: url("../img/works_thumb03.png");
+}
+/* ------------------------------------------------------ */
+div[class^=container] {
+  display: flex;
+  /* margin: 25px 0; */
+  /* border: 1px solid lightgreen; */
+  /* margin: 0 130px; */
+  border-bottom: 1px solid var(--gray);
+}
+/* ------------------------------------------------------ scroller icon */
+.scroll-downs {
+  position: fixed;
+  left: 540px;
+  bottom: 150px;
+  transform: translateX(-50%);
+  z-index: 1;
+  backdrop-filter: blur(1px);
+}
+.mousey {
+  width: 3px;
+  padding: 8px 13px 5px;
+  height: 35px;
+  border: 1px solid #000;
+  border-radius: 18px;
+  opacity: 0.75;
+  box-sizing: content-box;
+}
+.scroller {
+  width: 2px;
+  height: 8px;
+  border-radius: 25%;
+  background-color: #000;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; }
+  10% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(15px); opacity: 0;}
+}
+
+/* ------------------------------------------------------ scroll custom */
+div[class^=container] .webPageContainer div[class^=webPageBox]::-webkit-scrollbar,
+div[class^=container] .worksBox::-webkit-scrollbar {
+  width: 5px;
+}
+div[class^=container] .webPageContainer div[class^=webPageBox]::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--ivory),var(--yellow));
+  border-radius: 10px;
+}
+div[class^=container] .webPageContainer div[class^=webPageBox]::-webkit-scrollbar-track {
+  background: var(--pink);
+}
+div[class^=container] .worksBox::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--purple),var(--pink),var(--yellow));
+  border-radius: 10px;
+}
+div[class^=container] .worksBox::-webkit-scrollbar-track {
+  border-right: 1px solid var(--purple);
+}
+
+
+
+
+
+
+
+
+/* ------------------------------------------------------ left contents */
+div[class^=container] .webPageContainer {
+  /* overflow: hidden; */
+  margin: 25px;
+  min-width: 776px;
+  /* height: 700px; */
+  height: calc(100vh - (90px + 30px) * 2 );
+  /* border: 1px solid rgb(196, 57, 133); */
+}
+div[class^=container] .webPageContainer div[class^=webPageBox] {
+  /* overflow-y: scroll; */
+  overflow-y: auto;
+  position: relative;
+  max-width: 100%;
+  height: calc(100vh - (90px + 30px) * 2 );
+  cursor: pointer;
+  /* border: 1px solid blue; */
+}
+div[class^=container] .webPageContainer div[class^=webPageBox] .clickGuide {
+  position: absolute;
+  /* position: fixed; */
+  /* width: 100%;
+  height: 100%; */
+  width: 771px;
+  height: 130vh;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 40%, transparent);
+  /* opacity: .5; */
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 680px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  z-index: 1;
+  transition: .2s;
+}
+div[class^=container] .webPageContainer div[class^=webPageBox] img {
+  width: 100%;
+}
+/* ------------------------------------------------------ right contents*/
+div[class^=container] .worksBox {
+  padding: 70px 40px;
+  /* background-color: rgb(80, 0, 117); */
+  /* border: 1px solid blue; */
+  overflow-y: auto;
+  min-width: 700px;
+  height: calc(100vh - 90px * 2 );
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  border-left: 1px solid var(--gray);
+}
+
+/* .container .worksBox .worksInfo1 {
+  border: 1px solid red;
+} */
+div[class^=container] .worksBox .worksInfo1 .class {
+  color: #ccc;
+}
+div[class^=container] .worksBox .worksInfo1 .highlight_purple {
+  width: max-content;
+  color: #000;
+}
+/* .container .worksBox .worksInfo1 .commentDisc {
+  font-size: 20px;
+} */
+/* .container .worksBox .worksInfo1 .commentDisc .color_purple {
+  font-weight: 500;
+  color: var(--purple);
+} */
+div[class^=container] .worksBox .worksInfo1 .commentDisc {
+  margin: 5px 0 0 10px;
+  padding: 55px 0 0 15px;
+  /* font-size: 20px; */
+  border-left: 1px solid var(--purple);
+}
+div[class^=container] .worksBox .worksInfo1 .commentDisc p {
+  padding-top: 5px;
+}
+div[class^=container] .worksBox .worksInfo1 .serviceKw {
+  display: flex;
+  margin:  20px 0 0 25px;
+  /* font-size: 20px; */
+  font-weight: 400;
+  color: var(--purple);
+}
+div[class^=container] .worksBox .worksInfo1 .serviceKw li {
+  padding: 8px 40px;
+  margin-right: 10px;
+  min-width: max-content;
+  border: 1px solid var(--purple);
+  border-radius: 50px;
+}
+div[class^=container] .worksBox h3 {
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+div[class^=container] .worksBox .worksText {
+  color: #ccc;
+  line-height: 30px;
+}
+div[class^=container] .worksBox .worksInfo2 {
+  /* border: 1px solid green; */
+  margin: 150px 0;
+}
+div[class^=container] .worksBox .worksInfo2 h3 {
+  color: var(--pink);
+}
+div[class^=container] .worksBox .worksInfo2 .worksText {
+  margin: 5px 0 0 10px;
+  padding-left: 15px;
+  border-left: 1px solid;
+  border-color: var(--pink);
+}
+/* ------------------------------------------------------ code review */
+div[class^=container] .worksBox .worksInfo3 {
+  position: relative;
+}
+div[class^=container] .worksBox .worksInfo3 h3 {
+  color: var(--yellow);
+}
+div[class^=container] .worksBox .worksInfo3 .worksText {
+  position: relative;
+  margin: 5px 0 0 10px;
+  padding-left: 15px;
+  border-left: 1px solid var(--yellow)
+}
+div[class^=container] .worksBox .worksInfo3 .worksText div, .worksText p {
+  position: absolute;
+  text-align: justify;
+}
+/* ------------------------------------------------------ code review - works01*/
+.container01 .worksBox .worksInfo3 .worksText {
+  height: 2200px;
+}
+.container01 .worksBox .worksInfo3 .worksText p:nth-child(2) {
+  width: 400px;
+  left: 275px;
+}
+.container01 .worksBox .worksInfo3 .worksText div:nth-child(3) {
+  top: 355px;
+  left: 275px;
+}
+.container01 .worksBox .worksInfo3 .worksText p:nth-child(4) {
+  width: 400px;
+  top: 472px;
+  left: 275px;
+}
+.container01 .worksBox .worksInfo3 .worksText div:nth-child(5) {
+  top: 580px;
+}
+.container01 .worksBox .worksInfo3 .worksText p:nth-child(6) {
+  width: 600px;
+  top: 880px;
+}
+.container01 .worksBox .worksInfo3 .worksText div:nth-child(7) {
+  top: 1090px;
+}
+.container01 .worksBox .worksInfo3 .worksText p:nth-child(8) {
+  width: 510px;
+  top: 1500px;
+}
+.container01 .worksBox .worksInfo3 .worksText div:nth-child(9) {
+  top: 1650px;
+}
+.container01 .worksBox .worksInfo3 .worksText p:nth-child(10) {
+  top: 2120px;
+}
+/* ------------------------------------------------------ code review - works02*/
+.container02 .worksBox .worksInfo3 .worksText {
+  height: 2300px;
+}
+.container02 .worksBox .worksInfo3 .worksText p:nth-child(2) {
+  width: 660px;
+  top: 330px;
+}
+.container02 .worksBox .worksInfo3 .worksText div:nth-child(3) {
+  top: 530px;
+}
+.container02 .worksBox .worksInfo3 .worksText p:nth-child(4) {
+  width: 710px;
+  top: 960px;
+}
+.container02 .worksBox .worksInfo3 .worksText div:nth-child(5) {
+  top: 1170px;
+}
+.container02 .worksBox .worksInfo3 .worksText p:nth-child(6) {
+  width: 660px;
+  top: 1505px;
+}
+.container02 .worksBox .worksInfo3 .worksText div:nth-child(7) {
+  top: 1710px;
+}
+.container02 .worksBox .worksInfo3 .worksText p:nth-child(8) {
+  width: 350px;
+  top: 1710px;
+  left: 360px;
+}
+.container02 .worksBox .worksInfo3 .worksText p:nth-child(9) {
+  width: 350px;
+  top: 1850px;
+  left: 360px;
+}
+/* ------------------------------------------------------ code review - works03*/
+.container03 .worksBox .worksInfo3 .worksText {
+  height: 3100px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(2) {
+  width: 670px;
+  top: 115px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(3) {
+  width: 440px;
+  top: 300px;
+}
+.container03 .worksBox .worksInfo3 .worksText div:nth-child(4) {
+  top: 370px;
+}
+.container03 .worksBox .worksInfo3 .worksText div:nth-child(5) {
+  top: 1075px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(6) {
+  width: 300px;
+  top: 1130px;
+  left: 390px;
+}
+.container03 .worksBox .worksInfo3 .worksText div:nth-child(7) {
+  top: 1290px;
+  left: 390px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(8) {
+  width: 330px;
+  top: 1400px;
+  left: 390px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(9) {
+  width: 600px;
+  top: 1590px;
+}
+.container03 .worksBox .worksInfo3 .worksText div:nth-child(10) {
+  top: 1800px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(11) {
+  width: 600px;
+  top: 2205px;
+}
+.container03 .worksBox .worksInfo3 .worksText div:nth-child(12) {
+  top: 2370px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(13) {
+  top: 2890px;
+}
+.container03 .worksBox .worksInfo3 .worksText p:nth-child(14) {
+  width: 670px;
+  top: 2940px;
+}

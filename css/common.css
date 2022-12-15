@@ -1,5 +1,8 @@
 @import url("./reset.css");
 
+/* html {
+  background-color: #000;
+} */
 .inner {
   padding: 0 calc(100vw * 130 / 1920);
 }
@@ -20,6 +23,17 @@
   --gray: #999;
   --ivory: rgb(255, 255, 230);
 }
+body::-webkit-scrollbar {
+  width: 5px;
+}
+body::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--purple),var(--pink));
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--yellow);
+}
+/* ------------------------------------------------------ header */
 header {
   position: fixed;
   width: 100%;
@@ -56,13 +70,88 @@ header nav #gnb li {
   margin-left: calc(100vw * 100 / 1920);
 }
 header nav #gnb li:hover {
-  color: var(--purple);
+  color: var(--yellow);
 }
 header nav #gnb li.active {
-  color: var(--purple);
+  color: var(--yellow);
 }
+header nav #gnb li:focus {
+  color: var(--yellow);
+}
+/* ------------------------------------------------------ content */
 #wrap {
+  overflow-x: hidden;
   padding-top: 90px;
   color: #fff;
   background-color: #000;
+}
+span[class^='highlight_'] {
+  padding: 0 3px;
+  width: fit-content;
+  font-weight: 500;
+}
+.highlight_purple {
+  /* padding: 0 3px;
+  width: fit-content;
+  font-weight: 500; */
+  /* color: #fff; */
+  background: linear-gradient(transparent 10%, var(--purple) 10% 90%, transparent 90%);
+}
+.highlight_pink {
+  /* padding: 0 3px;
+  width: fit-content;
+  font-weight: 500; */
+  /* color: #fff; */
+  background: linear-gradient(transparent 10%, var(--pink) 10% 90%, transparent 90%);
+}
+.highlight_yellow {
+  /* padding: 0 3px;
+  width: fit-content;
+  font-weight: 500; */
+  /* color: #fff; */
+  background: linear-gradient(transparent 10%, var(--yellow) 10% 90%, transparent 90%);
+}
+.color_purple {
+  font-weight: 500;
+  color: var(--purple);
+}
+.color_pink {
+  font-weight: 500;
+  color: var(--pink);
+}
+.color_yellow {
+  font-weight: 500;
+  color: var(--yellow);
+}
+/* ------------------------------------------------------ works */
+/* .highlight_purple {
+  width: fit-content;
+  font-weight: 500;
+  color: #fff;
+  background: linear-gradient(transparent 10%, var(--purple) 10% 90%, transparent 90%);
+} */
+
+.worksBox .worksInfo1 p.class {
+  font-size: 16px;
+  /* font-weight: 300; */
+}
+.worksBox .worksInfo1 p.highlight_purple {
+  margin: 10px 0 15px;
+  font-size: 40px;
+  font-weight: 700;
+}
+.worksBox .worksInfo1 p.comment {
+  font-size: 20px;
+  /* font-weight: 300; */
+  letter-spacing: 0.02em;
+}
+.worksBox .worksInfo1 p.comment::before {
+  display: inline-block;
+  margin-right: 5px;
+  width: 13px;
+  height: 15px;
+  content: "";
+  background: url("../img/comment_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
 }

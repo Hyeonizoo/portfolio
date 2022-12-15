@@ -3,10 +3,49 @@
 #home {
   overflow: hidden;
 }
+/* ------------------------------------ Overlay ------------------ */
+.overlay {
+  background-color: #000;
+}
+.grid {
+  width: 100%;
+  height: 800px;
+  height: 785px;
+  overflow: hidden;
+  z-index: 10px;
+  perspective: 600px;
+}
+.gridFade {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 11;
+  background: radial-gradient(ellipse at 50% 50%, rgba(14, 20, 22, 0) 0%, #0e1416 80%);
+}
+.gridLines {
+  width: 100%;
+  height: 200%;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3) 1px, transparent 0), linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 1px, transparent 0);
+  background-size: 45px 30px;
+  background-repeat: repeat;
+  transform-origin: 100% 0 0;
+  animation: play 15s linear infinite;
+}
+@keyframes play {
+  0% {
+    transform: rotateX(45deg) translateY(-50%);
+  }
+  100% {
+    transform: rotateX(45deg) translateY(0);
+  }
+}
 /* ------------------------------------ home - slogan ------------------ */
 #home #slogan {
-  height: calc(100vh - 90px * 2);
-  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 #home #slogan .sloganText {
   position: relative;
@@ -20,10 +59,31 @@
   color: #000;
   text-align: center;
   text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+  /* animation: colorChange2 2s infinite linear alternate; */
 }
 #home #slogan .sloganText .active {
   color: #fff;
   text-shadow: none;
+  color: var(--yellow);
+  animation: colorChange 2s infinite linear alternate;
+}
+@keyframes colorChange {
+  0% {
+    color: var(--yellow);
+  } 50% {
+    color: var(--pink);
+  } 100% {
+    color: var(--purple);
+  }
+}
+@keyframes colorChange2 {
+  0% {
+    text-shadow: -1px 0px var(--yellow), 0px 1px var(--yellow), 1px 0px var(--yellow), 0px -1px var(--yellow);
+  } 50% {
+    text-shadow: -1px 0px var(--pink), 0px 1px var(--pink), 1px 0px var(--pink), 0px -1px var(--pink);
+  } 100% {
+    text-shadow: -1px 0px var(--purple), 0px 1px var(--purple), 1px 0px var(--purple), 0px -1px var(--purple);
+  }
 }
 #home #slogan .sloganText div:nth-child(2) {
   position: relative;
@@ -105,11 +165,20 @@
   width: 223px;
   height: 20px;
   border-top: 2px solid var(--purple);
+  animation: shortLine 2s infinite alternate ease-in-out;
+}
+@keyframes shortLine {
+  0% {
+    border-color: var(--yellow);
+    width: 0;
+  } 90% {
+    width: 223px;
+    border-color: var(--purple);
+  }
 }
 #home #introduce .title p:nth-child(2) span {
   font-weight: 500;
   color: var(--purple);
-  background-color: #fff;
   background: linear-gradient(transparent 10%, var(--ivory) 10% 90%, transparent 90%);
 }
 #home #introduce .profile {
@@ -130,6 +199,7 @@
   top: 70px;
   left: calc(100vw * 85 / 1920);
   background-image: url("../img/profile.png");
+  background-size: cover;
 }
 #home #introduce .profile .introR .textContainer {
   position: relative;
@@ -174,7 +244,6 @@
   margin-top: 15px;
 }
 #home #introduce .profile .introR .textContainer .textBox .textL {
-  /* background-color: magenta; */
   min-width: max-content;
   margin-right: calc(100vw * 10 / 1920);
   font-weight: 400;
@@ -188,19 +257,36 @@
   position: relative;
   padding-left: calc(100vw * 130 / 1920);
 }
+#home #introduce .skills .clickIcon {
+  position: absolute;
+  top: -25px;
+  left: 140px;
+  font-weight: 200;
+  color: var(--yellow);
+  letter-spacing: 0.02em;
+  animation: blink 1s linear alternate infinite;
+}
+@keyframes blink {
+  from {
+    color: var(--yellow);
+  } to {
+    color: var(--pink);
+  }
+}
 #home #introduce .skills select {
   padding: 5px 40px;
-  font-size: 28px;
+  font-size: 24px;
   color: #fff;
   background-color: transparent;
   border: 1px solid var(--gray);
   border-radius: 5px;
-  appearance: none;
-  background: url("../img/rounded-down.svg") no-repeat 95% 50%;
+  background-size: 20px;
 }
 #home #introduce .skills select option {
-  font-size: 24px;
   color: #000;
+}
+#home #introduce .skills select span {
+  color: red !important;
 }
 #home #introduce .skills h4 {
   display: inline-block;
@@ -247,4 +333,343 @@
   font-weight: 200;
   letter-spacing: 0.01em;
   transform: translateX(-50%);
+}
+/* ------------------------------------ home - infomore ------------------ */
+#home .infoMore {
+  position: relative;
+  margin: 100px auto 200px;
+  font-size: 64px;
+  font-weight: 800;
+  text-align: center;
+}
+#home .infoMore a {
+  color: #fff;
+}
+#home .infoMore p {
+  padding: 100px;
+  line-height: 90px;
+  letter-spacing: 0.015em;
+  color: #000;
+  text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+  z-index: 1;
+  cursor: pointer;
+}
+#home .infoMore:hover p span {
+  text-shadow: none;
+}
+#home .infoMore:hover p span:nth-child(2) {
+  color: var(--yellow);
+}
+#home .infoMore:hover p span:nth-child(5) {
+  color: var(--purple);
+}
+#home .infoMore:hover p span:nth-child(6) {
+  color: var(--pink);
+}
+#home .infoMore p span {
+  color: #fff;
+  text-shadow: none;
+}
+#home .infoMore .moreAbout {
+  position: absolute;
+  top: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 220px;
+  border-top: 1px solid var(--yellow);
+  border-bottom: 1px solid var(--yellow);
+  opacity: 0;
+  transition: 1s;
+  cursor: pointer;
+}
+#home .infoMore .moreAbout::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  top: -50px;
+  left: 250px;
+  border-top: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
+  transform: rotate(45deg);
+}
+/* ------------------------------------------------------ works */
+#works {
+  height: 100vh;
+  color: #000;
+  background-color: #fff;
+}
+#works .sliderWrap .worksContainer {
+  padding-top: 170px;
+}
+#works .sliderWrap .worksContainer .title {
+  display: flex;
+  position: relative;
+  font-size: 64px;
+  font-weight: 100;
+}
+#works .sliderWrap .worksContainer .title p {
+  min-width: max-content;
+}
+#works .sliderWrap .worksContainer .highlight_purple {
+  font-weight: 500;
+  color: #fff;
+}
+#works .sliderWrap .worksContainer .title .shortLine {
+  position: relative;
+  margin: 0 10px;
+  width: 100%;
+  top: 35px;
+  border-top: 2px solid var(--purple);
+  animation: shortLine2 2s infinite alternate ease-in;
+}
+@keyframes shortLine2 {
+  0% {
+    border-color: var(--yellow);
+    width: 0;
+  } 50% {
+    border-color: var(--pink);
+  } 90% {
+    width: 100%;
+    border-color: var(--purple);
+  }
+}
+#works .sliderWrap .worksContainer .contents {
+  display: flex;
+  padding-top: 70px;
+}
+#works .sliderWrap .worksContainer .thumbnail {
+  position: relative;
+  overflow: hidden;
+  margin-left: calc(100vw * 60 / 1920);
+  width: 818px;
+  height: 461px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+#works .sliderWrap .worksContainer .thumbnail img {
+  position: absolute;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  transition: .5s ease-in-out;
+}
+#works .sliderWrap .worksContainer .thumbnail img:hover {
+  max-width: 101%;
+}
+#works .sliderWrap .worksContainer .worksBox {
+  margin: 50px 0 0 calc(100vw * 40 / 1920);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo1 p.highlight_purple {
+  width: max-content;
+  font-weight: 700;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo2 {
+  display: flex;
+  margin-top: 80px;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo2 ul {
+  font-size: 20px;
+  width: fit-content;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo2 ul:nth-child(1) {
+  min-width: max-content;
+  font-weight: 500;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo2 ul:nth-child(2) {
+  margin-left: 15px;
+}
+#works .sliderWrap .worksContainer .worksBox .worksInfo2 ul li {
+  margin-bottom: 15px;
+}
+#works .sliderWrap .worksContainer .worksBox button[class^='visit'] {
+  position: absolute;
+  padding: 5px 16px;
+  bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+  border-radius: 15px;
+}
+#works .sliderWrap .worksContainer .worksBox button[class^='visit']:hover {
+  background-color: var(--pink);
+  color: #fff;
+}
+/* ------------------------------------------------------ contact */
+#contact {
+  position: relative;
+  overflow: hidden;
+  height: calc(100vh - 90px);
+}
+#contact .contactBox {
+  padding-top: 110px;
+}
+#contact .contactBox .topCont {
+  position: relative;
+  margin: 0 calc(100vw * 130 / 1920);
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 31px;
+  word-spacing: 8px;
+  letter-spacing: 0.015em;
+}
+#contact .contactBox .topCont .sloganT:nth-child(1) span, .topCont div {
+  color: var(--purple);
+}
+#contact .contactBox .topCont .sloganT:nth-child(2) span {
+  color: var(--pink);
+}
+#contact .contactBox .topCont .sloganT:nth-child(3) span {
+  color: var(--yellow);
+}
+#contact .contactBox .topCont div {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#contact .contactBox .sns {
+  position: relative;
+  margin: 0 calc(100vw * 130 / 1920);
+  height: 500px;
+  top: -50px;
+  font-size: 128px;
+  font-weight: 900;
+  color: #000;
+  text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
+  cursor: default;
+}
+#contact .contactBox .sns li {
+  position: absolute;
+  right: 0;
+}
+#contact .contactBox .sns li:nth-child(1) {
+  top: 0
+}
+#contact .contactBox .sns li:nth-child(2) {
+  top: 150px;
+}
+#contact .contactBox .sns li:nth-child(3) {
+  top: 300px;
+}
+#contact .contactBox .sns li span {
+  color: #fff;
+  text-shadow: none;
+}
+#contact .contactBox .sns li:nth-child(1):hover {
+  border-bottom: 1px solid var(--purple);
+  transition: .3s;
+}
+#contact .contactBox .sns li:nth-child(2):hover {
+  border-bottom: 1px solid var(--pink);
+  transition: .3s;
+}
+#contact .contactBox .sns li:nth-child(3):hover {
+  border-bottom: 1px solid var(--yellow);
+  transition: .3s;
+}
+#contact .contactBox .gform {
+  position: relative;
+  margin: 0 calc(100vw * 130 / 1920);
+  top: -100px;  
+  width: 485px;
+}
+#contact .contactBox .gform ul {
+  display: inline-block;
+}
+#contact .contactBox .gform ul li { 
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  font-size: 28px;
+  color: var(--gray);
+  border-bottom: 1px solid var(--gray);
+}
+#contact .contactBox .gform ul li input {
+  padding: 6px 8px;
+  width: 300px;
+  height: 30px;
+  font-size: 20px;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+#contact .contactBox .gform input[type="submit"] {
+  padding: 10px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 0.02em;
+  border-bottom: 1px solid var(--gray);
+}
+#contact .contactBox .gform input[type="submit"]:hover {
+  color: var(--yellow);
+}
+#contact .contactBox .bottomCont ul {
+  display: flex;
+  position: relative;
+  top: -50px;
+  font-size: 38px;
+  font-weight: 100;
+  white-space: nowrap;
+}
+#contact .contactBox .bottomCont ul li {
+  margin-right: 50px;
+  position: relative;
+  left: 0;
+  animation: slider 30s infinite linear alternate;
+}
+#contact .contactBox .bottomCont ul li:nth-child(2n-1) {
+  color: var(--purple);
+}
+#contact .contactBox .bottomCont ul li:nth-child(2n) {
+  color: var(--pink);
+}
+#contact .contactBox .bottomCont ul li:nth-child(3n) {
+  color: var(--yellow);
+}
+#contact .contactBox .bottomCont ul li::after {
+  content: "*";
+  position: relative;
+  margin-left: 50px;
+  top: 5px;
+}
+@keyframes slider {
+  from {
+    left: 0;
+  } to {
+    left: -2400px;
+  }
+}
+footer {
+  height: 90px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #000;
+  border-top: 1px solid var(--gray);
+}
+footer .footer {
+  position: relative;
+  margin: 0 calc(100vw * 130 / 1920);
+}
+footer .footer div {
+  display: inline-block;
+  position: absolute;
+  top: 30px;
+}
+footer .footer div:nth-child(1) {
+  font-weight: 600;
+  color: var(--purple);
+}
+footer .footer div span {
+  margin-left: 15px;
+}
+footer .footer div:nth-child(1):hover span {
+  color: var(--yellow);
+}
+footer .footer div:nth-child(2) {
+  right: 0;
+  font-weight: 200;
+  color: var(--gray);
 }
