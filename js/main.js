@@ -62,7 +62,7 @@ $(document).ready(function() {
     slide: '.worksContainer',
     arrows: true,
     dots: true,
-    // autoplay: true,
+    autoplay: true,
     infinite: true,
     speed: 200,
     fade: true,
@@ -86,7 +86,25 @@ $(document).ready(function() {
     window.open('https://kyobobook.netlify.app/', '_blank'); 
   })
 
-  
 
+  // skill explain
+  // $('.skill_0_explain5').removeClass('hidden');
+  
+  if($('.skill_0 .doughnut1').hover(function() {
+    $('.skill_0_explain1').toggleClass('hidden');
+  }));
+  if($('.skill_0 .doughnut2').hover(function() {
+    $('.skill_0_explain2').toggleClass('hidden');
+  }));
+  if($('.skill_0 .doughnut3').hover(function() {
+    $('.skill_0_explain3').toggleClass('hidden');
+  }));
+  if($('.skill_0 .doughnut4').hover(function() {
+    $('.skill_0_explain4').toggleClass('hidden');
+  }));
+  if($('.skill_0 .doughnut5').hover(function() {
+    $('.skill_0_explain5').toggleClass('hidden');
+  }));
+  
   
 });
