@@ -1,4 +1,8 @@
 @import url("./common.css");
+
+header nav #gnb .pdf {
+  color: #000;
+}
 /* ------------------------------------------------------ home */
 #home {
   overflow: hidden;
@@ -9,11 +13,11 @@
 }
 .grid {
   width: 100%;
-  height: 800px;
+  height: 1000px;
   height: 785px;
   overflow: hidden;
   z-index: 10px;
-  perspective: 600px;
+  perspective: 580px;
 }
 .gridFade {
   width: 100%;
@@ -44,7 +48,7 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-50%);  
   z-index: 1;
 }
 #home #slogan .sloganText {
@@ -59,7 +63,6 @@
   color: #000;
   text-align: center;
   text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
-  /* animation: colorChange2 2s infinite linear alternate; */
 }
 #home #slogan .sloganText .active {
   color: #fff;
@@ -187,22 +190,40 @@
 }
 #home #introduce .profile .introL {
   position: relative;
-  margin-left: calc(100vw * 130 / 1920);
   width: calc(100vw * 840 / 1920);
-  min-width: 550px;
+  min-width: 650px;
   height: 1000px;
 }
 #home #introduce .profile .introL .frame {
   position: absolute;
+  margin-left: calc(100vw * 130 / 1920);
   width: 455px;
   height: 455px;
   top: 70px;
   left: calc(100vw * 85 / 1920);
   background-image: url("../img/profile.png");
   background-size: cover;
+  z-index: 1;
+}
+#home #introduce .profile .introL .line_horizon {
+  position: absolute;
+  width: 100%;
+  height: 470px;
+  top: 175px;
+  border-top: 1px solid var(--darkgray);
+  border-bottom: 1px solid var(--darkgray);
+}
+#home #introduce .profile .introL .line_vertical {
+  position: absolute;
+  width: 350px;
+  height: 100%;
+  left: 350px;
+  border-left: 1px solid var(--darkgray);
+  border-right: 1px solid var(--darkgray);
 }
 #home #introduce .profile .introR .textContainer {
   position: relative;
+  margin-left: calc(100vw * 100 / 1920);
 }
 #home #introduce h4 {
   font-size: 28px;
@@ -245,7 +266,7 @@
 }
 #home #introduce .profile .introR .textContainer .textBox .textL {
   min-width: max-content;
-  margin-right: calc(100vw * 10 / 1920);
+  margin-right: calc(100vw * 13 / 1920);
   font-weight: 400;
 }
 #home #introduce .profile .introR .textContainer .textBox .textR {
@@ -311,9 +332,14 @@
   width: 95px;
   min-width: 95px;
   height: 95px;
-  background: conic-gradient(from 90deg at 50% 50%, #A22EE2 0deg, #FFE396 112.5deg, #CD69D1 232.5deg, #A22EE2 360deg);
   border: 1px solid #000000;
   border-radius: 50%;
+}
+#home #introduce .skills .graph:hover {
+  color: var(--yellow);
+  transform: scale(1.07);
+  transition: .3s;
+  cursor: pointer;
 }
 #home #introduce .skills .graph::after {
   content: "";
@@ -333,6 +359,68 @@
   font-weight: 200;
   letter-spacing: 0.01em;
   transform: translateX(-50%);
+}
+#home #introduce .skills .skill_0 .graph.doughnut1 {
+  background: conic-gradient(var(--purple) 0% 75%, #2e2536 75% 100%);
+  animation: graph 3s infinite;
+}
+#home #introduce .skills .skill_0 .graph.doughnut2 {
+  background: conic-gradient(var(--purple) 0% 70%, #2e2536 70% 100%);
+}
+#home #introduce .skills .skill_0 .graph.doughnut3 {
+  background: conic-gradient(var(--purple) 0% 55%, #2e2536 55% 100%);
+}
+#home #introduce .skills .skill_0 .graph.doughnut4 {
+  background: conic-gradient(var(--purple) 0% 65%, #2e2536 65% 100%);
+}
+#home #introduce .skills .skill_0 .graph.doughnut5 {
+  background: conic-gradient(var(--purple) 0% 40%, #2e2536 40% 100%);
+}
+
+#home #introduce .skills .skill_1 .graph.doughnut1 {
+  background: conic-gradient(var(--pink) 0% 60%, #2e2536 60% 100%);
+}
+#home #introduce .skills .skill_1 .graph.doughnut2 {
+  background: conic-gradient(var(--pink) 0% 70%, #2e2536 70% 100%);
+}
+#home #introduce .skills .skill_1 .graph.doughnut3 {
+  background: conic-gradient(var(--pink) 0% 80%, #2e2536 80% 100%);
+}
+#home #introduce .skills .skill_1 .graph.doughnut4 {
+  background: conic-gradient(var(--pink) 0% 65%, #2e2536 65% 100%);
+}
+#home #introduce .skills .skill_1 .graph.doughnut5 {
+  background: conic-gradient(var(--pink) 0% 70%, #2e2536 70% 100%);
+}
+#home #introduce .skills .skill_1 .graph.doughnut6 {
+  background: conic-gradient(var(--pink) 0% 55%, #2e2536 55% 100%);
+}
+
+#home #introduce .skills .skill_2 .graph.doughnut1 {
+  background: conic-gradient(var(--yellow) 0% 80%, #2e2536 80% 100%);
+}
+#home #introduce .skills .skill_2 .graph.doughnut2 {
+  background: conic-gradient(var(--yellow) 0% 90%, #2e2536 90% 100%);
+}
+#home #introduce .skills .skill_2 .graph.doughnut3 {
+  background: conic-gradient(var(--yellow) 0% 85%, #2e2536 85% 100%);
+}
+#home #introduce .skills .skill_2 .graph.doughnut4 {
+  background: conic-gradient(var(--yellow) 0% 70%, #2e2536 70% 100%);
+}
+#home #introduce .skills .skill_2 .graph.doughnut5 {
+  background: conic-gradient(var(--yellow) 0% 75%, #2e2536 75% 100%);
+}
+#home #introduce .skills div[class*=explain] {
+  position: absolute;
+  margin-left: 400px;
+  padding: 20px;
+  width: 800px;
+  font-weight: 200;
+  background-color: #2e2536;
+  border-radius: 15px;
+  letter-spacing: 0.02em;
+  line-height: 25px;
 }
 /* ------------------------------------ home - infomore ------------------ */
 #home .infoMore {
@@ -388,17 +476,20 @@
   position: absolute;
   width: 300px;
   height: 300px;
-  top: -50px;
+  top: -50px; 
   left: 250px;
   border-top: 1px solid var(--yellow);
   border-right: 1px solid var(--yellow);
   transform: rotate(45deg);
 }
+
 /* ------------------------------------------------------ works */
 #works {
   height: 100vh;
   color: #000;
   background-color: #fff;
+  /* background-color: #000; */
+  position: relative;
 }
 #works .sliderWrap .worksContainer {
   padding-top: 170px;
@@ -469,7 +560,10 @@
 }
 #works .sliderWrap .worksContainer .worksBox .worksInfo2 {
   display: flex;
-  margin-top: 80px;
+  margin-top: 70px;
+  padding: 20px 20px 0;
+  background-color: rgb(240, 237, 230);
+  border-radius: 15px;
 }
 #works .sliderWrap .worksContainer .worksBox .worksInfo2 ul {
   font-size: 20px;

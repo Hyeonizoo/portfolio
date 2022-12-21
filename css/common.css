@@ -1,8 +1,8 @@
 @import url("./reset.css");
 
-/* html {
+html, body {
   background-color: #000;
-} */
+}
 .inner {
   padding: 0 calc(100vw * 130 / 1920);
 }
@@ -21,6 +21,7 @@
   --pink: #CD69D1;
   --yellow: #FFE396;
   --gray: #999;
+  --darkgray: #444;
   --ivory: rgb(255, 255, 230);
 }
 body::-webkit-scrollbar {
