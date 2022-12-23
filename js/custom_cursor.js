@@ -1,7 +1,6 @@
 var mouseCursor = document.querySelector(".cursor");
 var links = document.querySelectorAll("a");
 var about = document.querySelector(".moreAbout");
-var thumbnail = document.querySelector(".thumbnail");
 
 links.forEach(function(menu) {
     menu.addEventListener("mouseover", function() {
@@ -18,13 +17,6 @@ about.addEventListener("mouseover", function() {
 });
 about.addEventListener("mouseleave", function() {
   mouseCursor.classList.remove("link_hover_about");
-});
-
-thumbnail.addEventListener("mouseover", function() {
-  mouseCursor.classList.add("link_hover");
-});
-thumbnail.addEventListener("mouseleave", function() {
-  mouseCursor.classList.remove("link_hover");
 });
 
 function myCursor(e) {

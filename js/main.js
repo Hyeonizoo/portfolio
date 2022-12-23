@@ -74,22 +74,29 @@ $(document).ready(function() {
     cssEase: 'ease-in'
   });
 
+  // works thumbnail hover
+  $('.thumbnail').hover(function() {
+    $('.clickGuide').css('opacity','1');
+  });
+  $('.thumbnail').mouseout(function() {
+    $('.clickGuide').css('opacity','0');
+  });
 
   // works 상세페이지 이동
   $('.thumbnail').click(function() {
     location.href="./works.html"
-  })
+  });
 
   // 프로젝트 실제 웹사이트 이동
   $('.visit1').click(function() {
     window.open('https://eogeumni.netlify.app', '_blank'); 
-  })
+  });
   $('.visit2').click(function() {
     window.open('https://e-dam.netlify.app/', '_blank'); 
-  })
+  });
   $('.visit3').click(function() {
     window.open('https://kyobobook.netlify.app/', '_blank'); 
-  })
+  });
 
 
   // skill explain  
