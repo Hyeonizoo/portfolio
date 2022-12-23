@@ -12,6 +12,13 @@ $(document).ready(function() {
     }
     lastScrollTop = st;
   });
+  window.onmousemove = function(e) {
+    if(e.clientY < 120) {
+        document.querySelector("header").style.top = "0";
+    } else {
+        document.querySelector("header").style.top = "-90px";
+    }
+}
 
   // slogan
   setInterval(myKeyword, 1500);
@@ -77,7 +84,7 @@ $(document).ready(function() {
 
   // 프로젝트 실제 웹사이트 이동
   $('.visit1').click(function() {
-    window.open('https://eogeumni.netlify.app', '_blank'); 
+    window.open('https://62ac8722033a9c629b3a705d--nimble-sunburst-5d6aef.netlify.app/', '_blank'); 
   })
   $('.visit2').click(function() {
     window.open('https://e-dam.netlify.app/', '_blank'); 
