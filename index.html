@@ -12,12 +12,16 @@
   <link rel="stylesheet" type="text/css" href="./css/slick-theme.css"/>
   <!-- javaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
   <script type="text/javascript" src="./js/slick.min.js"></script>
   <script type="text/javascript" src="./js/main.js"></script>
 
   <title>Hyeonji Portfolio</title>
 </head>
 <body>
+  <div class="cursor"></div>
+    <!-- <div class="cursor_follower"></div> -->
+
   <header class="inner">
     <nav>
       <a href="" onclick="history.go()"><h1><img src="./img/logo.svg"></h1></a>
@@ -188,8 +192,7 @@
           </div>
         </section>
         <div class="infoMore">
-          <div class="moreAbout"></div>
-          <a href="about.html">
+          <a class="moreAbout" href="about.html">
             <p>그래서! <span>어떻게</span> <span>반현지</span><span>가</span><br>
               <span>반드시</span>, <span>반듯하게</span> 나아가고 있냐고요?
             </p>
@@ -354,6 +357,6 @@
     </div>
   </footer>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-  <!-- <script type="text/javascript" src="./js/transition.js"></script> -->
+  <script type="text/javascript" src="./js/custom_cursor.js"></script>
 </body>
 </html>
