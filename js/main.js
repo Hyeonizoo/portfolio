@@ -87,24 +87,31 @@ $(document).ready(function() {
   })
 
 
-  // skill explain
-  // $('.skill_0_explain5').removeClass('hidden');
-  
-  if($('.skill_0 .doughnut1').hover(function() {
+  // skill explain  
+  $('.skill_0 .doughnut1').hover(function() {
     $('.skill_0_explain1').toggleClass('hidden');
-  }));
-  if($('.skill_0 .doughnut2').hover(function() {
+  });
+  $('.skill_0 .doughnut2').hover(function() {
     $('.skill_0_explain2').toggleClass('hidden');
-  }));
-  if($('.skill_0 .doughnut3').hover(function() {
+  });
+  $('.skill_0 .doughnut3').hover(function() {
     $('.skill_0_explain3').toggleClass('hidden');
-  }));
-  if($('.skill_0 .doughnut4').hover(function() {
+  });
+  $('.skill_0 .doughnut4').hover(function() {
     $('.skill_0_explain4').toggleClass('hidden');
-  }));
-  if($('.skill_0 .doughnut5').hover(function() {
+  });
+  $('.skill_0 .doughnut5').hover(function() {
     $('.skill_0_explain5').toggleClass('hidden');
-  }));
+  });
   
+  // resume hover
+  $('.resume a').hover(function() {
+    $(this).css('color', 'var(--yellow)');
+    $(this).text("언제든 기다리고 있어요!");
+  });
+  $('.resume a').mouseout(function() {
+    $(this).css('color', 'var(--pupple)');
+    $(this).text("→ 이력서 다운로드");
+  });
   
 });
