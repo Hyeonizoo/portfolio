@@ -57,9 +57,12 @@ class Example {
   });
 
 
-  // $('[class*=Kw]').hover(function() {
-  //   $('.item').css('opacity','1');
-  // })
-  // $('[class*=Kw]').mouseout(function() {
-  //   $('.item').css('opacity','0');
-  // })
+  // custom cursor
+  let mouseCursor = document.querySelector(".cursor");
+  let navLinks = document.querySelectorAll(".gnb li a");
+  window.addEventListener("scroll", cursor);
+  window.addEventListener("mousemove", cursor);
+  function cursor(e) {
+    mouseCursor.style.left = e.pageX + "px";
+    mouseCursor.style.top = e.pageY - scrollY + "px";
+  }
