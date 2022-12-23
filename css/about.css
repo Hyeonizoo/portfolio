@@ -1,5 +1,8 @@
 @import url("./common.css");
 
+body {
+  cursor: none;
+}
 header nav h1 img {
   filter: brightness(100);
 }
@@ -10,18 +13,7 @@ header nav #gnb {
   right: calc(100vw * 135 / 1920);
 }
 
-/* html,
-body {
-  height: 100%;
-  background: #eee;
-} */
-/* body {
-  overflow: hidden;
-} */
 .scroll-animations-example .scrollsection {
-  /* padding: 10vh 10vh 10vh 10vmax; */
-  /* min-width: 550vh; */
-  /* border: 5px solid red; */
   overflow: hidden;
   height: calc(100vh - 90px);
   height: 500px;
@@ -29,9 +21,6 @@ body {
   width: 6100px;
 }
 .scroll-animations-example .scrollsection .textContainer {
-  /* border: 1px solid green; */
-  /* position: absolute; */
-  /* z-index: 5 !important; */
   background-color: rgb(67, 95, 255);
 
 }
@@ -39,34 +28,27 @@ body {
   position: absolute;
 }
 .scroll-animations-example .scrollsection .textContainer div[class^="mainKw"] {
-  /* border: 1px solid red; */
   width: max-content;
   z-index: 99;
 }
 .scroll-animations-example .scrollsection .textContainer div[class^="mainKw"] h2 {
-  /* font-family: 'inter'; */
   font-size: 160px;
   font-weight: 800;
   color: #000;
   text-shadow: -1px 0px #fff, 0px 1px #fff, 1px 0px #fff, 0px -1px #fff;
-  /* letter-spacing: -0.05em; */
 }
 .scroll-animations-example .scrollsection .textContainer div[class^="mainKw"] h2 .textLine {
   color: #fff;
   text-shadow: none;
 }
 .scroll-animations-example .scrollsection .textContainer p {
-  /* margin-top: 10px; */
   font-size: 20px;
   font-weight: 200;
   text-align: justify;
   letter-spacing: 0.02em;
   white-space: normal;
 }
-/* .scroll-animations-example .scrollsection .textContainer div[class^="mainKw"] p {
-  margin-top: 15px;
-  width: 500px;
-} */
+
 .scroll-animations-example .scrollsection .textContainer div[class^="subKw"] {
   z-index: 99;
 }
@@ -75,7 +57,6 @@ body {
   font-weight: 500;
 }
 .scroll-animations-example .scrollsection .textContainer div[class^="subKw"] p {
-  /* border: 1px solid rgb(60, 0, 128); */
   margin-top: 15px;
   line-height: 140%;
 }
@@ -84,30 +65,25 @@ body {
   color: #000;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw01 {
-  /* background-color: rgb(60, 0, 128); */
   top: 150px;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw01 p {
   margin-top: 5px;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw02 {
-  /* background-color: rgb(60, 0, 128); */
   top: 150px;
   left: 2700px;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw02 h2 div {
-  /* line-height: 140px; */
   position: relative;
   top: -25px;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw02 p {
-  /* margin-top: 15px; */
   position: relative;
   width: 500px;
   top: -10px;
 }
 .scroll-animations-example .scrollsection .textContainer .mainKw03 {
-  /* background-color: rgb(60, 0, 128); */
   top: 307px;
   left: 4490px;
 }
@@ -115,8 +91,6 @@ body {
   font-family: 'inter';
 }
 .scroll-animations-example .scrollsection .textContainer .subKw01 {
-  /* background-color: rgb(60, 0, 128); */
-  /* border: 1px solid rgb(60, 0, 128); */
   width: 580px;
   top: 560px;
   left: 925px;
@@ -144,18 +118,8 @@ body {
 .scroll-animations-example .scrollsection .textContainer .subKw06 {
   width: 490px;
   top: 328px;
-  /* left: 5432px; */
   left: 5534px;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* 이미지 사진 */
@@ -217,7 +181,6 @@ body {
   pointer-events: none;
   transform: translateX(0) translateY(0) scale(1);
   transition: filter 0.3s ease, opacity 1s ease, transform 1s ease;
-  /* border: 3px solid rgb(57, 93, 255); */
 }
 .scroll-animations-example > .scrollsection > .item:nth-of-type(4n) > .image {
   transform: translateX(-30vh) translateY(-30vh) scale(0.8);

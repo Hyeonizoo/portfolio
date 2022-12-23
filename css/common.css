@@ -2,6 +2,7 @@
 
 html, body {
   background-color: #000;
+  /* cursor: none; */
 }
 .inner {
   padding: 0 calc(100vw * 130 / 1920);
@@ -24,6 +25,7 @@ html, body {
   --darkgray: #444;
   --ivory: rgb(255, 255, 230);
 }
+
 body::-webkit-scrollbar {
   width: 5px;
 }
@@ -33,6 +35,34 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-track {
   background: var(--yellow);
+}
+/* ------------------------------------------------------ cursor */
+.cursor {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--purple);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: saturate(250%);
+  background-size: cover;
+}
+.link_hover {
+  transform: scale(2);
+  border: 1px solid var(--yellow);
+}
+.link_hover_about {
+  width: 353px;
+  height: 261px;
+  border: none;
+  border-radius: 0;
+  background-image: url("../img/arrow.svg");
+  background-size: cover;
 }
 /* ------------------------------------------------------ header */
 header {
@@ -92,24 +122,12 @@ span[class^='highlight_'] {
   font-weight: 500;
 }
 .highlight_purple {
-  /* padding: 0 3px;
-  width: fit-content;
-  font-weight: 500; */
-  /* color: #fff; */
   background: linear-gradient(transparent 10%, var(--purple) 10% 90%, transparent 90%);
 }
 .highlight_pink {
-  /* padding: 0 3px;
-  width: fit-content;
-  font-weight: 500; */
-  /* color: #fff; */
   background: linear-gradient(transparent 10%, var(--pink) 10% 90%, transparent 90%);
 }
 .highlight_yellow {
-  /* padding: 0 3px;
-  width: fit-content;
-  font-weight: 500; */
-  /* color: #fff; */
   background: linear-gradient(transparent 10%, var(--yellow) 10% 90%, transparent 90%);
 }
 .color_purple {
@@ -125,16 +143,8 @@ span[class^='highlight_'] {
   color: var(--yellow);
 }
 /* ------------------------------------------------------ works */
-/* .highlight_purple {
-  width: fit-content;
-  font-weight: 500;
-  color: #fff;
-  background: linear-gradient(transparent 10%, var(--purple) 10% 90%, transparent 90%);
-} */
-
 .worksBox .worksInfo1 p.class {
   font-size: 16px;
-  /* font-weight: 300; */
 }
 .worksBox .worksInfo1 p.highlight_purple {
   margin: 10px 0 15px;
@@ -143,7 +153,6 @@ span[class^='highlight_'] {
 }
 .worksBox .worksInfo1 p.comment {
   font-size: 20px;
-  /* font-weight: 300; */
   letter-spacing: 0.02em;
 }
 .worksBox .worksInfo1 p.comment::before {

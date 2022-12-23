@@ -10,13 +10,11 @@ header nav #gnb {
   right: calc(100vw * 135 / 1920);
 }
 #wrap {
-  /* overflow: hidden; */
   width: 100vw;
   height: calc(100vh - 90px);
 }
 
 /* ------------------------------------------------------ */
-
 aside {
   position: absolute;
   border-right: 1px solid var(--gray);
@@ -25,18 +23,13 @@ aside {
 }
 aside .asideBox {
   position: relative;
-  /* height: 100%; */
   height: 500px;
-  /* border: 1px solid green; */
-  /* padding: 25px; */
   margin: 25px 15px;
-  /* text-align: right; */
 }
 aside .asideBox .back {
   position: absolute;
   padding: 8px;
   width: max-content;
-  /* left: 45px; */
   right: 0;
   font-family: 'arial', 'san-serif';
   color: var(--yellow);
@@ -52,10 +45,8 @@ aside .asideBox ul {
   position: absolute;
   top: 160px;
   right: 0;
-  /* border: 1px solid blue; */
 }
 aside .asideBox ul li {
-  /* border: 1px solid red; */
   margin: 50px 0;
   width: 80px;
   height: 60px;
@@ -86,9 +77,6 @@ aside .asideBox ul li:nth-child(3) {
 /* ------------------------------------------------------ */
 div[class^=container] {
   display: flex;
-  /* margin: 25px 0; */
-  /* border: 1px solid lightgreen; */
-  /* margin: 0 130px; */
   border-bottom: 1px solid var(--gray);
 }
 /* ------------------------------------------------------ scroller icon */
@@ -129,6 +117,7 @@ div[class^=container] {
 div[class^=container] .webPageContainer div[class^=webPageBox]::-webkit-scrollbar,
 div[class^=container] .worksBox::-webkit-scrollbar {
   width: 5px;
+  height: 1px;
 }
 div[class^=container] .webPageContainer div[class^=webPageBox]::-webkit-scrollbar-thumb {
   background: linear-gradient(var(--ivory),var(--yellow));
@@ -145,40 +134,25 @@ div[class^=container] .worksBox::-webkit-scrollbar-track {
   border-right: 1px solid var(--purple);
 }
 
-
-
-
-
-
-
-
 /* ------------------------------------------------------ left contents */
 div[class^=container] .webPageContainer {
   /* overflow: hidden; */
   margin: 25px;
   min-width: 776px;
-  /* height: 700px; */
   height: calc(100vh - (90px + 30px) * 2 );
-  /* border: 1px solid rgb(196, 57, 133); */
 }
 div[class^=container] .webPageContainer div[class^=webPageBox] {
-  /* overflow-y: scroll; */
   overflow-y: auto;
   position: relative;
   max-width: 100%;
   height: calc(100vh - (90px + 30px) * 2 );
   cursor: pointer;
-  /* border: 1px solid blue; */
 }
 div[class^=container] .webPageContainer div[class^=webPageBox] .clickGuide {
   position: absolute;
-  /* position: fixed; */
-  /* width: 100%;
-  height: 100%; */
   width: 771px;
   height: 130vh;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 40%, transparent);
-  /* opacity: .5; */
   font-size: 20px;
   font-weight: 200;
   line-height: 680px;
@@ -193,8 +167,6 @@ div[class^=container] .webPageContainer div[class^=webPageBox] img {
 /* ------------------------------------------------------ right contents*/
 div[class^=container] .worksBox {
   padding: 70px 40px;
-  /* background-color: rgb(80, 0, 117); */
-  /* border: 1px solid blue; */
   overflow-y: auto;
   min-width: 700px;
   height: calc(100vh - 90px * 2 );
@@ -203,10 +175,6 @@ div[class^=container] .worksBox {
   letter-spacing: 0.02em;
   border-left: 1px solid var(--gray);
 }
-
-/* .container .worksBox .worksInfo1 {
-  border: 1px solid red;
-} */
 div[class^=container] .worksBox .worksInfo1 .class {
   color: #ccc;
 }
@@ -214,17 +182,9 @@ div[class^=container] .worksBox .worksInfo1 .highlight_purple {
   width: max-content;
   color: #000;
 }
-/* .container .worksBox .worksInfo1 .commentDisc {
-  font-size: 20px;
-} */
-/* .container .worksBox .worksInfo1 .commentDisc .color_purple {
-  font-weight: 500;
-  color: var(--purple);
-} */
 div[class^=container] .worksBox .worksInfo1 .commentDisc {
   margin: 5px 0 0 10px;
   padding: 55px 0 0 15px;
-  /* font-size: 20px; */
   border-left: 1px solid var(--purple);
 }
 div[class^=container] .worksBox .worksInfo1 .commentDisc p {
@@ -233,7 +193,6 @@ div[class^=container] .worksBox .worksInfo1 .commentDisc p {
 div[class^=container] .worksBox .worksInfo1 .serviceKw {
   display: flex;
   margin:  20px 0 0 25px;
-  /* font-size: 20px; */
   font-weight: 400;
   color: var(--purple);
 }
@@ -253,7 +212,6 @@ div[class^=container] .worksBox .worksText {
   line-height: 30px;
 }
 div[class^=container] .worksBox .worksInfo2 {
-  /* border: 1px solid green; */
   margin: 150px 0;
 }
 div[class^=container] .worksBox .worksInfo2 h3 {
